@@ -1,0 +1,6 @@
+# set up dashboard
+db -layout source registers assembly stack
+
+target remote localhost:3333
+monitor reset halt
+stepi
