@@ -212,7 +212,8 @@ class Dashboard(gdb.Command):
         # cleared by on_continue when the dashboard is printed to a separate
         # file)
         if self.enabled and self.is_running():
-            clear = Dashboard.clear_screen() #if self.output else ''
+            #clear = Dashboard.clear_screen() if self.output else ''
+            clear = Dashboard.clear_screen()
             self.display(clear, self.build(), '\n')
 
     def on_exit(self):
